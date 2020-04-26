@@ -6,12 +6,15 @@ $font: "Poppins", sans-serif;
 ////////////////////////////////// Colors
 
 $cyan: #2acfcf;
+$light-cyan: #95e9e9;
 $dark-violet: #3b3054;
 $red: #f46262;
 $gray: #bfbfbf;
 $grayish-violet: #9e9aa7;
 $very-dark-blue: #35323e;
 $very-dark-violet: #232127;
+$shorten-bg: #f0f1f6;
+$white: #fff;
 
 ////////////////////////////////// Main
 
@@ -19,21 +22,37 @@ body {
   font-family: $font;
 }
 
+button:focus {
+  outline: none;
+}
+
 ////////////////////////////////// Nav Desktop
 
 .nav-d {
   h6 {
     color: $grayish-violet;
+
+    &:hover {
+      color: $very-dark-violet;
+    }
   }
 }
 
 .auth {
   h6 {
     color: $grayish-violet;
+
+    &:hover {
+      color: $very-dark-violet;
+    }
   }
 
   button {
     background-color: $cyan;
+
+    &:hover {
+      background-color: rgba($color: $light-cyan, $alpha: 1);
+    }
   }
 }
 
@@ -44,25 +63,25 @@ body {
   animation-iteration-count: 1;
   animation-duration: 0.5s;
   animation-timing-function: ease;
-  transform: translateY(-31rem);
+  transform: scale(0);
 
   @keyframes nav-open {
     from {
-      transform: translateY(-31rem);
+      transform: scale(0);
     }
 
     to {
-      transform: translateY(0);
+      transform: scale(1);
     }
   }
 
   @keyframes nav-close {
     from {
-      transform: translateY(0);
+      transform: scale(1);
     }
 
     to {
-      transform: translateY(-31rem);
+      transform: scale(0);
     }
   }
 
@@ -77,7 +96,176 @@ body {
 }
 
 .toggler {
-  .feather {
+  i {
     color: $grayish-violet;
+  }
+}
+
+////////////////////////////////// Intro
+
+.intro {
+  h1 {
+    color: $very-dark-blue;
+  }
+
+  p {
+    color: $grayish-violet;
+  }
+
+  button {
+    background-color: $cyan;
+
+    &:hover {
+      background-color: rgba($color: $light-cyan, $alpha: 1);
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .intro {
+    .illustration {
+      width: 125%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .intro {
+    .illustration {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .intro {
+    .illustration {
+      width: 75%;
+    }
+  }
+}
+
+////////////////////////////////// Shorten URL Section
+
+.shorten-url-section {
+  background-color: $shorten-bg;
+
+  .shorten {
+    background: url(../assets/bg-shorten-mobile.svg) no-repeat right top;
+    background-color: $dark-violet;
+
+    .input-warning {
+      border: 3px solid $red;
+    }
+
+    .input-warning::placeholder {
+      color: rgba($color: $red, $alpha: 0.5);
+    }
+
+    button {
+      background-color: $cyan;
+
+      &:hover {
+        background-color: rgba($color: $light-cyan, $alpha: 1);
+      }
+    }
+  }
+
+  ////////////////////////////////// Result Section
+
+  .shortened-section {
+    button {
+      background-color: $cyan;
+
+      &:hover {
+        background-color: rgba($color: $light-cyan, $alpha: 1);
+      }
+    }
+
+    .line {
+      border: 0.5px solid rgba($color: $gray, $alpha: 0.2);
+      width: 100%;
+    }
+
+    .short-link {
+      color: $cyan;
+    }
+  }
+}
+
+////////////////////////////////// Features
+
+.features {
+  h1 {
+    color: $very-dark-blue;
+  }
+
+  p {
+    color: $grayish-violet;
+  }
+
+  .feature {
+    .icon-wrapper {
+      background-color: $dark-violet;
+    }
+
+    h1 {
+      color: $very-dark-blue;
+    }
+
+    p {
+      color: $grayish-violet;
+    }
+  }
+
+  .vertical-line {
+    background-color: $cyan;
+  }
+}
+
+////////////////////////////////// Boost
+
+.boost {
+  background: url(../assets/bg-boost-mobile.svg) no-repeat right top;
+  background-color: $dark-violet;
+
+  button {
+    background-color: $cyan;
+
+    &:hover {
+      background-color: rgba($color: $light-cyan, $alpha: 1);
+    }
+  }
+}
+
+////////////////////////////////// Footer
+
+footer {
+  background-color: $very-dark-violet;
+
+  .links {
+    .link {
+      color: $gray;
+
+      &:hover {
+        color: $cyan;
+      }
+    }
+  }
+
+  .social-icons {
+    i {
+      &:hover {
+        color: $cyan;
+      }
+    }
+  }
+
+  .credits {
+    h6 {
+      a {
+        color: $cyan;
+      }
+    }
   }
 }

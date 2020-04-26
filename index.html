@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/973e1e5e78.js" crossorigin="anonymous"></script>
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="styles/style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
 </head>
 
@@ -19,39 +20,191 @@
           <img src="assets/logo.svg" alt="">
         </div>
         <div class="nav-d ml-6 hidden lg:flex">
-          <h6 class="font-bold mr-8">Features</h6>
-          <h6 class="font-bold mr-8">Pricing</h6>
-          <h6 class="font-bold mr-8">Resources</h6>
+          <h6 class="font-bold mr-8 transition-colors duration-300 cursor-pointer">Features</h6>
+          <h6 class="font-bold mr-8 transition-colors duration-300 cursor-pointer">Pricing</h6>
+          <h6 class="font-bold mr-8 transition-colors duration-300 cursor-pointer">Resources</h6>
         </div>
       </div>
       <div class="auth flex items-center hidden lg:flex">
-        <h6 class="font-bold mr-6">Login</h6>
-        <button class="text-white font-bold py-2 px-6 rounded-full">
+        <h6 class="font-bold mr-6 transition-colors duration-300 cursor-pointer">Login</h6>
+        <button type="button" class="text-white font-bold py-2 px-6 rounded-full transition-colors duration-300">
           Sign Up
         </button>
       </div>
-      <div class="toggler w-8">
-        <span class="w-full h-auto" data-feather="menu" id="open"></span>
-        <span class="w-full h-auto" data-feather="x" id="close"></span>
+      <div class="toggler w-8 cursor-pointer lg:hidden">
+        <i class="fas fa-bars text-3xl  w-full h-auto" id="open"></i>
+        <i class="fas fa-times text-3xl w-full h-auto" id="close"></i>
       </div>
     </nav>
     <div
-      class="nav-m fixed top-0 right-0 bottom-0 left-0 mt-20 mx-6 px-6 rounded-lg flex flex-col justify-evenly items-center">
+      class="nav-m fixed top-0 right-0 bottom-0 left-0 mt-20 mx-6 px-6 rounded-lg flex flex-col justify-evenly items-center z-10">
       <h6 class="text-white text-lg font-bold">Features</h6>
       <h6 class="text-white text-lg font-bold">Pricing</h6>
       <h6 class="text-white text-lg font-bold">Resources</h6>
       <span class="line"></span>
       <h6 class="text-white text-lg font-bold">Login</h6>
-      <button class="text-white text-lg font-bold py-3 px-6 rounded-full w-full">
+      <button type="button" class="text-white text-lg font-bold py-3 px-6 rounded-full w-full">
         Sign Up
       </button>
     </div>
   </div>
+  <div class="intro flex flex-col items-center mb-40 overflow-x-hidden
+  lg:flex-row lg:justify-center lg:ml-10 xl:ml-32 lg:mt-8">
+    <div class="slogan flex flex-col mt-8 items-center order-2 
+      lg:order-1 lg:items-start">
+      <h1 class="text-center font-bold text-4xl leading-tight 
+        lg:text-left lg:text-5xl xl:text-6xl">
+        More than just shorter links
+      </h1>
+      <p class="text-center text-lg mx-4 mt-3 leading-relaxed lg:text-left lg:mx-0 xl:text-xl xl:w-4/5">
+        Build your brand’s recognition and get detailed insights
+        on how your links are performing.
+      </p>
+      <button type="button"
+        class="text-white text-lg font-bold rounded-full py-3 px-10 mt-8 transition-colors duration-300">
+        Get Started
+      </button>
+    </div>
+    <div class="illustration order-1 relative transform translate-x-16 
+      sm:translate-x-24
+      md:translate-x-32
+      lg:order-2 lg:translate-x-24
+      xl:translate-x-32">
+      <img src="assets/illustration-working.svg" alt="" class="w-full h-auto">
+    </div>
+  </div>
+  <div class="shorten-url-section">
+    <div class="shorten rounded-lg flex flex-col items-center px-6 py-6 mx-6 transform -translate-y-20
+    lg:mx-10 xl:mx-32 lg:flex-row lg:items-center lg:px-12 lg:py-12">
+      <input type="text" placeholder="Shorten a link here..." class="bg-white rounded-md px-4 py-3 mb-4 w-full focus:outline-none
+          lg:py-4 lg:w-4/5 lg:mb-0" id="url">
+      <button type="button" class="text-white text-lg font-bold rounded-md py-2 px-10 w-full transition-colors
+      lg:w-1/5 lg:text-base lg:py-4 lg:ml-4 lg:px-8">
+        Shorten It!
+      </button>
+    </div>
+    <div class="results">
 
-  <script>
-    feather.replace();
-  </script>
+    </div>
+    <div class="features flex flex-col items-center mx-6 lg:mx-10 xl:mx-32">
+      <h1 class="font-bold text-3xl lg:text-4xl">
+        Advanced Statistics
+      </h1>
+      <p class="text-center mt-4 mb-20 lg:w-1/2 lg:text-lg lg:mb-10">
+        Track how your links are performing across the web with our
+        advanced statistics dashboard.
+      </p>
+      <div class="flex flex-col items-center mb-16 lg:flex-row">
+        <div class="feature flex flex-col items-center bg-white rounded-md px-8 pb-10 
+          lg:items-start lg:px-6 lg:pb-8">
+          <div class="icon-wrapper rounded-full p-6 -mt-12 mb-8">
+            <div class="icon w-10">
+              <img src="assets/icon-brand-recognition.svg" alt="" class="w-full h-auto">
+            </div>
+          </div>
+          <h1 class="text-xl font-bold mb-4">
+            Brand Recognition
+          </h1>
+          <p class="text-base text-center leading-relaxed lg:text-left lg:text-sm">
+            Boost your brand recognition with each click. Generic links don’t
+            mean a thing. Branded links help instil confidence in your content.
+          </p>
+        </div>
+        <span class="vertical-line h-12 w-2 mb-12 lg:h-2 lg:mt-20 lg:w-20"></span>
+        <div class="feature flex flex-col items-center bg-white rounded-md px-8 pb-10 
+          lg:items-start lg:px-6 lg:pb-8 lg:mt-20">
+          <div class="icon-wrapper rounded-full p-6 -mt-12 mb-8">
+            <div class="icon w-10">
+              <img src="assets/icon-detailed-records.svg" alt="" class="w-full h-auto">
+            </div>
+          </div>
+          <h1 class="text-xl font-bold mb-4">
+            Detailed Records
+          </h1>
+          <p class="text-base text-center leading-relaxed lg:text-left lg:text-sm">
+            Gain insights into who is clicking your links. Knowing when and where
+            people engage with your content helps inform better decisions.
+          </p>
+        </div>
+        <span class="vertical-line h-12 w-2 mb-12 lg:h-2 lg:mt-20 lg:w-20"></span>
+        <div class="feature flex flex-col items-center bg-white rounded-md px-8 pb-10 
+          lg:items-start lg:px-6 lg:pb-8 lg:mt-40">
+          <div class="icon-wrapper rounded-full p-6 -mt-12 mb-8">
+            <div class="icon w-10">
+              <img src="assets/icon-fully-customizable.svg" alt="" class="w-full h-auto">
+            </div>
+          </div>
+          <h1 class="text-xl font-bold mb-4">
+            Fully Customizable
+          </h1>
+          <p class="text-base text-center leading-relaxed lg:text-left lg:text-sm">
+            Improve brand awareness and content discoverability through customizable
+            links, supercharging audience engagement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="boost flex flex-col justify-center items-center py-24 lg:py-12">
+    <h1 class="text-white text-2xl font-bold mb-4 lg:text-4xl">
+      Boost your links today
+    </h1>
+    <button type="button" class="text-white text-lg font-bold rounded-full py-3 px-10 transition-colors duration-300">
+      Get Started
+    </button>
+  </div>
+  <footer class="flex flex-col py-12 lg:py-20 lg:px-10">
+    <div class="flex flex-col items-center lg:flex-row lg:justify-around">
+      <div class="logo w-32 lg:self-start">
+        <img src="assets/logo-w.svg" alt="" class="w-full h-auto">
+      </div>
+      <div class="flex flex-col items-center lg:flex-row lg:items-start">
+        <div class="links flex flex-col items-center my-10 lg:my-0 lg:items-start lg:mr-10 xl:mr-24">
+          <h6 class="text-white font-bold text-base mb-6">Features</h6>
+          <h6 class="link mb-3 transition-colors duration-300 cursor-pointer">Link Shortening</h6>
+          <h6 class="link mb-3 transition-colors duration-300 cursor-pointer">Branded Links</h6>
+          <h6 class="link mb-3 transition-colors duration-300 cursor-pointer">Analytics</h6>
+        </div>
+        <div class="links flex flex-col items-center lg:items-start lg:mr-10 xl:mr-24">
+          <h6 class="text-white font-bold text-base mb-6">Resources</h6>
+          <h6 class="link mb-3 transition-colors duration-300 cursor-pointer">Blog</h6>
+          <h6 class="link mb-3 transition-colors duration-300 cursor-pointer">Developers</h6>
+          <h6 class="link mb-3 transition-colors duration-300 cursor-pointer">Support</h6>
+        </div>
+        <div class="links flex flex-col items-center my-10 lg:my-0 lg:items-start">
+          <h6 class="text-white font-bold text-base mb-6">Company</h6>
+          <h6 class="link mb-3 transition-colors duration-300 cursor-pointer">About</h6>
+          <h6 class="link mb-3 transition-colors duration-300 cursor-pointer">Our Team</h6>
+          <h6 class="link mb-3 transition-colors duration-300 cursor-pointer">Careers</h6>
+          <h6 class="link mb-3 transition-colors duration-300 cursor-pointer">Contact</h6>
+        </div>
+      </div>
+      <div class="social-icons self-stretch flex justify-between px-24 lg:self-start lg:px-0">
+        <i class="fab fa-facebook text-white text-2xl transition-colors duration-300 cursor-pointer lg:mr-6" alt=""></i>
+        <i class="fab fa-twitter text-white text-2xl transition-colors duration-300 cursor-pointer lg:mr-6" alt=""></i>
+        <i class="fab fa-pinterest text-white text-2xl transition-colors duration-300 cursor-pointer lg:mr-6"
+          alt=""></i>
+        <i class="fab fa-instagram text-white text-2xl transition-colors duration-300 cursor-pointer lg:mr-6"
+          alt=""></i>
+      </div>
+    </div>
+    <div class="credits flex flex-col items-center w-full lg:flex-row lg:justify-around mt-6">
+      <h6 class="text-white text-base sm:text-lg md:text-xl">Challenge by
+        <a class="font-bold" href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G"
+          target="_blank">Frontend Mentor
+        </a></h6>
+      <h6 class="text-white text-base sm:text-lg md:text-xl">
+        Coded by <a class="font-bold" href="https://www.frontendmentor.io/profile/fatihcaen" target="_blank">Fatih
+          Can
+        </a>
+      </h6>
+    </div>
+  </footer>
+
+
   <script src="js/navbar-toggle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="services/shorten.js"></script>
 </body>
 
 </html>
