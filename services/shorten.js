@@ -23,6 +23,7 @@ function copyURL(e, url, copyButton) {
   e.preventDefault();
   let input = document.createElement('input');
   document.body.appendChild(input);
+  input.setAttribute('hidden', true);
   input.value = url;
   input.select();
   input.setSelectionRange(0, 99999);
@@ -52,6 +53,15 @@ function createStorage(shortURL, shortenedURL) {
   resultList.push(result);
   localStorage.setItem("results", JSON.stringify(resultList));
   resultSection.innerHTML = JSON.parse(localStorage.getItem("results"));
+  for (let index = 0; index < resultSection.children.length; index++) {
+    let copyButton = document.querySelector('.results #result' + index + ' .copy');
+    let url = document.getElementById('link' + index).innerText;
+    copyButton.innerText = 'Copy';
+    copyButton.style.backgroundColor = '#2acfcf';
+    copyButton.addEventListener('click', function (e) {
+      copyURL(e, url, copyButton);
+    });
+  }
   i++;
   localStorage.setItem("i", i);
 }
