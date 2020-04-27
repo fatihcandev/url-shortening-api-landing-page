@@ -15,4 +15,5 @@ You can access the website from <a href="https://fatihcaen-manage-landing-page.n
 - <a href="https://rel.ink/">Relink API</a>
 - <a href="https://sweetalert2.github.io">sweetalert</a>
 - VS Code
+- <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server</a> (VS Code extension. Allows you to see the changes realtime when you save the code.)
 - <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank">Prettier</a> (VS Code extension. Formats the code so you read it easily.)
