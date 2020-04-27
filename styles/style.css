@@ -30,24 +30,28 @@ button:focus {
 .nav-m {
   background-color: #3b3054;
   animation-iteration-count: 1;
-  animation-duration: 0.5s;
-  animation-timing-function: ease;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
   transform: scale(0);
 }
 @keyframes nav-open {
   from {
     transform: scale(0);
+    opacity: 0;
   }
   to {
     transform: scale(1);
+    opacity: 1;
   }
 }
 @keyframes nav-close {
   from {
     transform: scale(1);
+    opacity: 1;
   }
   to {
     transform: scale(0);
+    opacity: 0;
   }
 }
 .nav-m button {
