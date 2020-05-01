@@ -4,7 +4,7 @@ This is the URL Shortening API Landing Page  Code Challenge by frontendmenter.io
 
 You can access the challenge from <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G" target="_blank">this link</a>
 
-You can access the website from <a href="https://fatihcaen-manage-landing-page.netlify.app/" target="_blank">this link</a>
+You can access the website from <a href="https://fatihcaen-url-shortening-api.netlify.app/" target="_blank">this link</a>
 
 # Used technologies
 
